@@ -159,7 +159,7 @@ public class GengoClient extends JsonHttpApi
     	            @SuppressWarnings({ "rawtypes", "unchecked" })
     	            List<Payload> p = (List)jobs;
     	            data.put("jobs", (new Payloads(p)).toJSONArray());
-    	            data.put("as_group", processAsGroup ? MYGENGO_TRUE : MYGENGO_FALSE);
+    	            data.put("as_group", MYGENGO_FALSE);
     	            JSONObject rsp = call(url, HttpMethod.POST, data);
     	            return rsp;
     	        }
